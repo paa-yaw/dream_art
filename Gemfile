@@ -46,5 +46,5 @@ group :development do
 end
 
 gem "hirb"
-# gem ""
+ gem 'rspec-rails', '~> 3.6'
 
