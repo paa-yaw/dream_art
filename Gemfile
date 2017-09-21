@@ -46,5 +46,6 @@ group :development do
 end
 
 gem "hirb"
- gem 'rspec-rails', '~> 3.6'
+gem 'rspec-rails', '~> 3.6'
+gem 'puma'
 
