@@ -12,5 +12,6 @@ deploy:
     repo: paa-yaw/dream_art
     branch: staging
 after_deploy:
-  - heroku run rake db:migrate --app dreamartstage
-  - heroku restart --app dreamartstage
+  run: 
+    - "rake db:migrate"
+    - restart
