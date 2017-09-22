@@ -1,3 +1,16 @@
 language: ruby
 service:
   - postgresql
+before_script: 
+  - psql -c 'create database dream_art_test;' -U postgres
+deploy:
+  provider: heroku
+  api_key:
+    secure: XCCkb5hFVrLU6hmI1NcgUYthR+CkZ96UtMqmfpQF0Jem1GSXuTpbUFgYNsSqhMx/XoNnmYAtDB4TxXHNo6jkSWv1yqYv3XsjOVA53bTTaEc8NDix8PAVEZM1AHXviLdAGIEB/RLyD9bsktwVob99X12OlvAuaT+XKEcCQwrs3XS80K6usd+gBKoWFYni1suVDJ3jtE5XJyLl9ZbhfQsFVf+zq7j/U7ryPnAHZ+jDNaAj9MiUk6BWPe/v56cn65RlpAroYbU29SOkwzd4qqwHV5NM+a6Z3SrQI7T+b7sRVYJ7HQ71jnPJSIEfPv7oTvyJew7Ceb3DsADQZ9qg58T8VUSqQY9DjEj5gz1j3IW94cG7NoMD6ey4zJZj+MNNXJGN5urDAKTmfB/OP58tA1HUKKkoiVajfSrCL3fmzKguZ4t+QH9J9B3Y5AfIL/qqJbwZiC/VPBTH16Dt6Ozv0M/LrAnSpJiK50RiGeRC3UCPm63aAgUOcbpBHo6rqzYd+02QVvKTBJpWP/QeTmObV0Yie9CtbK0E5CKY2FzO6wdEZQiDC+sq8VyG/+4d2vM+XyvvA1hkHUGg/i8HC4vc8vyfRqry+Z27MUw+IB46fssI+fvAMcaXsq82OBQ12p79nmyL0qZwGsKUheZIVmNNXwPSsrcg0JNcodUq5do2733W3RM=
+  app: dreamartstage
+  on:
+    repo:
+      paa-yaw/dream_art
+after_deploy:
+  - heroku run rake db:migrate --app dreamartstage
+  - heroku restart --app dreamartstage
