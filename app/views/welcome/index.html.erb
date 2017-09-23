@@ -13,8 +13,8 @@
             <!-- begin brand -->
             <div class="login-header">
                 <div class="brand">
-                    Welcome...
-                    <small>to an amazing world of ART!!!</small>
+                    Welcome to...
+                    <small>an amazing world of ART!!!</small>
                 </div>
                 <div class="icon">
                     <%= fa_icon "sign-in" %>
@@ -22,25 +22,22 @@
             </div>
             <!-- end brand -->
             <div class="login-content">
-                <form action="index.html" method="POST" class="margin-bottom-0">
+                <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { class: "margin-bottom-0" }) do |f| %>
                     <div class="form-group m-b-20">
-                        <input type="text" class="form-control input-lg" placeholder="Email Address" />
+                        <%= f.input :email, required: true, placeholder: "Email Address", autofocus: true, class: "form-control input-lg" %>
                     </div>
                     <div class="form-group m-b-20">
-                        <input type="text" class="form-control input-lg" placeholder="Password" />
+                      <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length), placeholder: "Password", class: "form-control input-lg" %>
                     </div>
-                    <div class="checkbox m-b-20">
-                        <label>
-                            <input type="checkbox" /> Remember Me
-                        </label>
+                    <div class="form-group m-b-20">
+                       <%= f.input :password_confirmation, required: true, placeholder: "Confirm Password", class: "form-control input-lg" %>
                     </div>
+                    
                     <div class="login-buttons">
-                        <button type="submit" class="btn btn-success btn-block btn-lg">Sign me in</button>
+                    <%= f.button :submit, "Sign up", class: "btn btn-success btn-block btn-lg" %>
                     </div>
-                    <div class="m-t-20">
-                        Not a member yet? Click <a href="login_v2.html#">here</a> to register.
-                    </div>
-                </form>
+                    
+                <% end %>    
             </div>
         </div>
         <!-- end login -->

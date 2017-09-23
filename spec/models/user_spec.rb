@@ -10,4 +10,5 @@ RSpec.describe User, type: :model do
   @user_attributes.each do |attribute|
   	it { should respond_to attribute }
   end
+  
 end
