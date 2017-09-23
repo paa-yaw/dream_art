@@ -49,5 +49,10 @@ gem "hirb"
 gem 'rspec-rails', '~> 3.6'
 gem 'puma'
 gem 'font-awesome-rails'
+gem 'simple_form'
+gem 'country_select'
+gem 'devise'
+
+
 
 
