@@ -3,7 +3,7 @@
 	<!-- end #page-loader -->
 	
 	<div class="login-cover">
-	    <div class="login-cover-image"><%= image_tag "eye.jpg" %></div>
+	    <div class="login-cover-image"><%= image_tag("eye.jpg", height: "100%", width: "100%", alt: "") %></div>
 	    <div class="login-cover-bg"></div>
 	</div>
 	<!-- begin #page-container -->
@@ -24,13 +24,13 @@
             <div class="login-content">
                 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { class: "margin-bottom-0" }) do |f| %>
                     <div class="form-group m-b-20">
-                        <%= f.input :email, required: true, placeholder: "Email Address", autofocus: true, class: "form-control input-lg" %>
+                        <%= f.input :email, label: false, required: true, placeholder: "Email Address", autofocus: true, class: "form-control input-lg" %>
                     </div>
                     <div class="form-group m-b-20">
-                      <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length), placeholder: "Password", class: "form-control input-lg" %>
+                      <%= f.input :password, label: false, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length), placeholder: "Password", class: "form-control input-lg" %>
                     </div>
                     <div class="form-group m-b-20">
-                       <%= f.input :password_confirmation, required: true, placeholder: "Confirm Password", class: "form-control input-lg" %>
+                       <%= f.input :password_confirmation, label: false,  required: true, placeholder: "Confirm Password", class: "form-control input-lg" %>
                     </div>
                     
                     <div class="login-buttons">
