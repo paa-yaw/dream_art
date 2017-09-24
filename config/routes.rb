@@ -4,4 +4,6 @@ Rails.application.routes.draw do
   devise_scope :user do 
     root 'welcome#index', to: "devise/registrations#new"
   end
+
+  get "countdown/landing_page", to: "countdown#landing_page", as: :countdown
 end

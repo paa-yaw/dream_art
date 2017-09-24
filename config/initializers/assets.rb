@@ -22,3 +22,9 @@ Rails.application.config.assets.precompile += %w( welcome/apps.min.js )
 Rails.application.config.assets.precompile += %w( welcome/pace.min.js )
 
 
+Rails.application.config.assets.precompile += %w( countdown.css )
+Rails.application.config.assets.precompile += %w( countdown.js )
+Rails.application.config.assets.precompile += %w( countdown/jquery.js )
+Rails.application.config.assets.precompile += %w( countdown/jquery.countdown.min.js )
+Rails.application.config.assets.precompile += %w( countdown/plugins.js )
+Rails.application.config.assets.precompile += %w( countdown/main.js )
