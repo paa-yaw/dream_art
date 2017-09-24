@@ -634,7 +634,7 @@ h2 {
 
 /* Background */
 .background {
-  background: url(/assets/background-49c1dc3a9ea0830ca0387317a526ff28b2933a219e9ed24c3736a652f25414d8.jpg) no-repeat 50% 100%;
+  background: url(/assets/scificity-6d7d1cf28642b35fbfc6fd10b2b2e7036a9972eb19fe73b391a6da65774cc768.jpg) no-repeat 50% 100%;
   bottom: -20px;
   background-size: cover;
   position: absolute;
@@ -3890,6 +3890,33 @@ h2 {
  */
 
 
+  .alert-notice {
+    background: #dff0d8;
+    color: #3c763d;
+    border-color: #d6e9c6;
+}
+
+.alert-alert {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
+
+.alert-success {
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    color: #468847;
+    text-align: left;
+ }
+ 
+.alert-error {
+    background-color: #f2dede;
+    border-color: #eed3d7;
+    color: #b94a48;
+    text-align: left;
+ }
+
+
 
 /*!
 Animate.css - http://daneden.me/animate
@@ -4024,6 +4051,32 @@ body{background:#d9e0e7;font-size:12px;font-family:'Open Sans',"Helvetica Neue",
 
  */
 
+
+ .alert-notice {
+    background: #dff0d8;
+    color: #3c763d;
+    border-color: #d6e9c6;
+}
+
+.alert-alert {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
+
+.alert-success {
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    color: #468847;
+    text-align: left;
+ }
+ 
+.alert-error {
+    background-color: #f2dede;
+    border-color: #eed3d7;
+    color: #b94a48;
+    text-align: left;
+ }
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -4041,3 +4094,29 @@ body{background:#d9e0e7;font-size:12px;font-family:'Open Sans',"Helvetica Neue",
 
  */
 
+
+ .alert-notice {
+    background: #dff0d8;
+    color: #3c763d;
+    border-color: #d6e9c6;
+}
+
+.alert-alert {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
+
+.alert-success {
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    color: #468847;
+    text-align: left;
+ }
+ 
+.alert-error {
+    background-color: #f2dede;
+    border-color: #eed3d7;
+    color: #b94a48;
+    text-align: left;
+ }
