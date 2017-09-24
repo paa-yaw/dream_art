@@ -22,20 +22,7 @@ class RegistrationsController < Devise::RegistrationsController
   end
   end
 
-private
-
-def response_to_sign_up_failure(resource)
-  if resource.email == "" && resource.password == nil
-    redirect_to root_path, danger: "Please fill in the form"
-  elsif User.pluck(:email).include? resource.email
-    redirect_to root_path, danger: "email already exists"
-  else
-  	redirect_to root_path, danger: "probably unmatching password"
-  end
-end
-
-
-  protected 
+protected 
 
   def after_inactive_sign_up_path_for(resource)
   	countdown_url
@@ -44,4 +31,21 @@ end
   def after_sign_up_path_for(resource)
   	countdown_url
   end
+
+  
+
+private
+
+def response_to_sign_up_failure(resource)
+  if resource.email == "" && resource.password == nil
+    redirect_to root_url, danger: "Please fill in the form"
+  elsif User.pluck(:email).include? resource.email
+    redirect_to root_url, danger: "email already exists"
+  else
+  	redirect_to root_url, danger: "probably unmatching password"
+  end
+end
+
+
+  
 end
