@@ -63,6 +63,13 @@ gem 'country_select'
 gem 'devise'
 gem 'carrierwave', '~> 1.0'
 
+# gems for registration with facebook, twitter and linkedin
+gem 'omniauth'
+gem 'omniauth-twitter'
+gem 'omniauth-facebook'
+gem 'omniauth-linkedin'
+
+
 
 
 
