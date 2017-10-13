@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DreamArt</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  <%= stylesheet_link_tag    'countdown', media: 'all', 'data-turbolinks-track' => true  %>
+  <%= javascript_include_tag 'countdown', 'data-turbolinks-track' => true  %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<% flash.each do |key, message| %>
+  <div class="alert alert-<%= key %>">
+  <%= message %>
+  </div>
+<% end %>
+
+<%= yield %>
+
+</body>
+</html>

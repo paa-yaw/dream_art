@@ -35,6 +35,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem 'rspec-rails', '~> 3.6'
+  gem 'ffaker'
+  gem "factory_girl_rails", "~> 4.0"
 end
 
 group :development do
@@ -45,8 +48,29 @@ group :development do
   gem 'spring'
 end
 
+group :test do 
+  gem 'shoulda-matchers'
+  gem 'rspec-collection_matchers'
+  gem 'email_spec'
+  gem 'simplecov', :require => false
+end
+
 gem "hirb"
-gem 'rspec-rails', '~> 3.6'
 gem 'puma'
-# add comment...1234
+gem 'font-awesome-rails'
+gem 'simple_form'
+gem 'country_select'
+gem 'devise'
+gem 'carrierwave', '~> 1.0'
+
+# gems for registration with facebook, twitter and linkedin
+gem 'omniauth'
+gem 'omniauth-twitter'
+gem 'omniauth-facebook'
+gem 'omniauth-linkedin'
+
+
+
+
+
 

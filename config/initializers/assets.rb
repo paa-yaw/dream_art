@@ -9,3 +9,22 @@ Rails.application.config.assets.version = '1.0'
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
 # Rails.application.config.assets.precompile += %w( search.js )
+Rails.application.config.assets.precompile += %w( welcome.css )
+Rails.application.config.assets.precompile += %w( welcome.js )
+Rails.application.config.assets.precompile += %w( welcome/jquery-1.9.1.min.js )
+Rails.application.config.assets.precompile += %w( welcome/jquery-migrate-1.1.0.min.js )
+Rails.application.config.assets.precompile += %w( welcome/jquery-ui.min.js )
+Rails.application.config.assets.precompile += %w( welcome/bootstrap.min.js )
+Rails.application.config.assets.precompile += %w( welcome/jquery.slimscroll.min.js )
+Rails.application.config.assets.precompile += %w( welcome/jquery.cookie.js )
+Rails.application.config.assets.precompile += %w( welcome/login-v2.demo.min.js )
+Rails.application.config.assets.precompile += %w( welcome/apps.min.js )
+Rails.application.config.assets.precompile += %w( welcome/pace.min.js )
+
+
+Rails.application.config.assets.precompile += %w( countdown.css )
+Rails.application.config.assets.precompile += %w( countdown.js )
+Rails.application.config.assets.precompile += %w( countdown/jquery.js )
+Rails.application.config.assets.precompile += %w( countdown/jquery.countdown.min.js )
+Rails.application.config.assets.precompile += %w( countdown/plugins.js )
+Rails.application.config.assets.precompile += %w( countdown/main.js )

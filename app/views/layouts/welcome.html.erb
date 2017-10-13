@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DreamArt</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  <%= stylesheet_link_tag    'welcome', media: 'all', 'data-turbolinks-track' => true  %>
+  <%= javascript_include_tag 'welcome', 'data-turbolinks-track' => true  %>
+  <%= javascript_include_tag 'welcome/pace.min.js' %>
+  <%= csrf_meta_tags %>
+</head>
+<body class="pace-top">
+
+<% flash.each do |key, message| %>
+  <div class="alert alert-<%= key %> fade in m-b-15">
+  <%= message %>
+  </div>
+<% end %>
+
+<%= yield %>
+
+</body>
+</html>
