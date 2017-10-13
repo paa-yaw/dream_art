@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   end
 
   get 'countdown/landing_page', to: 'countdown#landing_page', as: :countdown
+  match '/users/:id/finish_signup' => 'users#finish_signup', via: [:get, :patch], :as => :finish_signup
 end
